@@ -1,0 +1,1 @@
+include ':app', ':androidextensions', ':ext-java'
