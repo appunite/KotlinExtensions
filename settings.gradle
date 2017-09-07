@@ -1,1 +1,1 @@
-include ':app', ':androidextensions', ':ext-java'
+include ':app', ':ext-java', ':ext-androidd'
