@@ -1,7 +1,7 @@
 apply plugin: 'java-library'
 apply plugin: 'maven'
 
-group='com.gitlab.appunite.KotlinExtensions'
+group='com.github.appunite.KotlinExtensions'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
