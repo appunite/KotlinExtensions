@@ -16,8 +16,8 @@ allprojects {
 And following lines to app build.gradle
 
 ```
-compile 'com.gitlab.appunite.KotlinExtensions:ext-android:master-SNAPSHOT'
-compile 'com.gitlab.appunite.KotlinExtensions:ext-java:master-SNAPSHOT'
+compile 'com.github.appunite.KotlinExtensions:ext-android:master-SNAPSHOT'
+compile 'com.github.appunite.KotlinExtensions:ext-java:master-SNAPSHOT'
 ```
 
 More info here https://jitpack.io/
