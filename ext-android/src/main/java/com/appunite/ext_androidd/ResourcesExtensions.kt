@@ -3,16 +3,23 @@ package com.appunite.ext_androidd
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.support.v4.content.res.ResourcesCompat
+import android.util.TypedValue
 
 
 fun Resources.color(resId: Int, theme: Resources.Theme? = null): Int = ResourcesCompat.getColor(this, resId, theme)
 
-fun Resources.drawable(resId: Int, theme: Resources.Theme? = null): Drawable? = ResourcesCompat.getDrawable(this, resId, theme)
+fun Resources.drawable(resId: Int, theme: Resources.Theme? = null): Drawable = ResourcesCompat.getDrawable(this, resId, theme)!!
 
-fun Resources.screenWidthPx(): Int = displayMetrics.widthPixels
+fun Resources.dpToPx(dp: Int): Float = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), displayMetrics)
 
-fun Resources.screenHeightPx(): Int = displayMetrics.heightPixels
+val Resources.screenWidthPx: Int
+    get() = displayMetrics.widthPixels
 
-fun Resources.density(): Float = displayMetrics.density
+val Resources.screenHeightPx: Int
+    get() = displayMetrics.heightPixels
 
-fun Resources.scaledDensity(): Float = displayMetrics.scaledDensity
+val Resources.density: Float
+    get() = displayMetrics.density
+
+val Resources.scaledDensity: Float
+    get() = displayMetrics.scaledDensity
