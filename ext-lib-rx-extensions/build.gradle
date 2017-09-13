@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+apply plugin: 'maven'
+
+group='com.github.appunite.KotlinExtensions'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.github.jacek-marchwicki.rx-java-extensions:rx-extensions:1.1.4'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
